@@ -1,4 +1,4 @@
-import { cva } from "class-variance-authority";
+import { VariantProps, cva } from "class-variance-authority";
 import { ComponentProps } from "react"
 
 const textStyles = cva("w-full", {
@@ -40,7 +40,7 @@ const textStyles = cva("w-full", {
     },
   });
   
-type TextProps = ComponentProps<"span">;
+type TextProps = ComponentProps<"span"> & VariantProps<typeof textStyles>;
 
 const Text = ({...props}: TextProps) => {
     return (
