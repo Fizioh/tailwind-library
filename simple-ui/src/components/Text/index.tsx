@@ -44,7 +44,7 @@ type TextProps = ComponentProps<"span"> & VariantProps<typeof textStyles>;
 
 const Text = ({...props}: TextProps) => {
     return (
-        <span {...props}>Text</span>
+        <span {...props}></span>
     )
 }
 
